@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class Q8 {
     public long solution(long n) {
+        
         String[] list = String.valueOf(n).split("");
         Arrays.sort(list);
 
