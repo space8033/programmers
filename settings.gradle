@@ -1,2 +1,3 @@
 rootProject.name = 'ProgrammersTest'
+include 'test'
 
