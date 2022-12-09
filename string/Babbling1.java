@@ -1,24 +1,20 @@
-public class Babbling {
+public class Babbling1 {
     public int solution(String[] babbling) {
         int answer = 0;
-
-        String[] once = {"aya", "ye", "woo", "ma"};
-        String[] twice = {"ayaaya", "yeye", "woowoo", "mama"};
+        String[] possible = {"aya", "ye", "woo", "ma"};
 
         for(int i = 0; i < babbling.length; i++) {
             String s = babbling[i];
 
             for(int j = 0; j < 4; j++) {
-                s = s.replace(twice[j], "0");
-            }
-            for(int j = 0; j < 4; j++) {
-                s = s.replace(once[j], "1");
+                s = s.replace(possible[j], "0");
             }
 
             boolean check = true;
             for(int j = 0; j < s.length(); j++) {
-                if(s.charAt(j) != '1') {
+                if(s.charAt(j) != '0') {
                     check = false;
+                    break;
                 }
             }
 
@@ -26,7 +22,6 @@ public class Babbling {
                 answer++;
             }
         }
-
         return answer;
     }
 }
